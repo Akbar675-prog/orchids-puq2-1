@@ -715,8 +715,9 @@ export default function UserProfilePage() {
                   </div>
                 </div>
 
-                {isOwner && (
-                  <div className="row g-6">
+                  {isOwner && (
+                    <>
+                      <div className="row g-6">
                     <div className="col-md-6 col-lg-4">
                         <div className="card stat-card h-100">
                           <div className="card-body">
