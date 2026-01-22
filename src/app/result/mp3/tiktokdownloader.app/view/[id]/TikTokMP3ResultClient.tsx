@@ -47,7 +47,7 @@ export default function TikTokMP3ResultClient({ id, data }: Props) {
               <li>
                 <div className="btn btn-primary px-2 px-sm-4 px-lg-2 px-xl-4">
                   <span className="icon-base ri ri-user-line me-md-1 icon-18px"></span>
-                  <span className="d-none d-md-block">Visora APIs Active</span>
+                  <span className="d-none d-md-block">Vallzx APIs Active</span>
                 </div>
               </li>
             </ul>

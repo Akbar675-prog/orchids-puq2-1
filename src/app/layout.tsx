@@ -5,9 +5,9 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Visora APIs - Layanan RestAPI by Visora",
-  description: "Visora API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
-  keywords: ["visora api", "json api", "javascript api", "downloader api", "social media api", "converter api", "whatsapp bot", "baileys api", "chat api"],
+  title: "Vallzx APIs - Layanan RestAPI by Vallzx",
+  description: "Vallzx API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
+  keywords: ["vallzx api", "json api", "javascript api", "downloader api", "social media api", "converter api", "whatsapp bot", "baileys api", "chat api"],
   alternates: {
     canonical: "https://api.visora.my.id",
   },
@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     icon: "https://visora-dev-assets-id.assetsvsiddev.workers.dev/small-favicon/favicon-small.png",
   },
   robots: "index, follow",
-  authors: [{ name: "Visora" }],
+  authors: [{ name: "Vallzx" }],
   openGraph: {
-    title: "Visora APIs - Layanan RestAPI by Visora",
-    description: "Visora API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
+    title: "Vallzx APIs - Layanan RestAPI by Vallzx",
+    description: "Vallzx API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
     url: "https://api.visora.my.id",
-    siteName: "Visora APIs",
+    siteName: "Vallzx APIs",
     type: "website",
     images: [
       {
@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en" className="layout-navbar-fixed layout-wide" dir="ltr" data-skin="default" data-bs-theme="light" data-assets-path="/assets/" data-template="front-pages" suppressHydrationWarning>
+    <html lang="en" className="layout-navbar-fixed layout-wide" dir="ltr" data-skin="default" data-bs-theme="light" data-assets-path="https://api.visora.my.id/assets/" data-template="front-pages" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
@@ -57,16 +57,16 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         
-        <link rel="stylesheet" href="/assets/vendor/fonts/iconify-icons.css" />
-        <link rel="stylesheet" href="/assets/vendor/libs/node-waves/node-waves.css" />
-        <link rel="stylesheet" href="/assets/vendor/libs/pickr/pickr-themes.css" />
-        <link rel="stylesheet" href="/assets/vendor/libs/nouislider/nouislider.css" />
-        <link rel="stylesheet" href="/assets/vendor/libs/swiper/swiper.css" />
-        <link rel="stylesheet" href="/assets/vendor/css/core.css" />
-        <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-        <link rel="stylesheet" href="/assets/vendor/css/pages/front-page.css" />
-        <link rel="stylesheet" href="/assets/vendor/css/pages/front-page-landing.css" />
-        <link rel="stylesheet" href="/assets/css/demo.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/fonts/iconify-icons.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/node-waves/node-waves.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/pickr/pickr-themes.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/nouislider/nouislider.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/swiper/swiper.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/css/core.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/css/pages/front-page.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/css/pages/front-page-landing.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/css/demo.css" />
       </head>
       <body className="antialiased">
         <Script
@@ -87,21 +87,21 @@ export default function RootLayout({
           data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
         />
         
-        <Script src="/assets/vendor/js/helpers.js" strategy="beforeInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/js/helpers.js" strategy="beforeInteractive" />
         <Script src="/js/customizer.js" strategy="beforeInteractive" />
-        <Script src="/assets/js/front-config.js" strategy="beforeInteractive" />
+        <Script src="https://api.visora.my.id/assets/js/front-config.js" strategy="beforeInteractive" />
         
-        <Script src="/assets/vendor/js/dropdown-hover.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/js/mega-dropdown.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/libs/popper/popper.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/js/bootstrap.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/libs/node-waves/node-waves.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/libs/pickr/pickr.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/libs/nouislider/nouislider.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/libs/swiper/swiper.js" strategy="afterInteractive" />
-        <Script src="/assets/js/front-main.js" strategy="afterInteractive" />
-        <Script src="/assets/js/front-page-landing.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/js/dropdown-hover.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/js/mega-dropdown.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/libs/popper/popper.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/js/bootstrap.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/libs/node-waves/node-waves.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/libs/pickr/pickr.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/libs/nouislider/nouislider.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/vendor/libs/swiper/swiper.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/js/front-main.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/js/front-page-landing.js" strategy="afterInteractive" />
         
         <Script id="customizer-loading-script" strategy="afterInteractive">{`
           (function() {

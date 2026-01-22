@@ -481,7 +481,7 @@ export default function PlanPage() {
                   <div className="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
                     <div className="text-body">
                       © {new Date().getFullYear()} • Build on{" "}
-                      <a href="/" className="footer-link">Visora APIs</a>
+                      <a href="/" className="footer-link">Vallzx APIs</a>
                     </div>
                   </div>
                 </div>

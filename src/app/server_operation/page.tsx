@@ -543,7 +543,7 @@ export default function ServerOperationPage() {
                           Vercel
                         </a>
                       </div>
-                      <span className="mb-2 fs-tiny">Visora API Services</span>
+                      <span className="mb-2 fs-tiny">Vallzx API Services</span>
                     </div>
                   </div>
                 </footer>

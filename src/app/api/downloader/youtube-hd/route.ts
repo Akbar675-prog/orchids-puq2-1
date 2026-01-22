@@ -119,7 +119,7 @@ export async function GET(req: NextRequest) {
 
     return prettyJson({
       status: true,
-      creator: "Visora APIs",
+      creator: "Vallzx APIs",
       result: {
         title,
         videoId,

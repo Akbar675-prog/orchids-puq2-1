@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
   if (!prompt) {
     return prettyJson({ 
       status: false,
-      creator: "visora_service-id",
+      creator: "vallzx_service-id",
       error: "Prompt is required. Example: /api/image-generator/fal-ai?prompt=A beautiful sunset" 
     }, 400);
   }
@@ -86,7 +86,7 @@ export async function GET(req: NextRequest) {
 
     return prettyJson({
       status: false,
-      creator: "visora_service-id",
+      creator: "vallzx_service-id",
       error: error.name === "AbortError" ? "Request timeout (30s)" : error.message
     }, error.name === "AbortError" ? 504 : 500);
   }

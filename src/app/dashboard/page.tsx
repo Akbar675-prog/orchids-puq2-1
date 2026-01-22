@@ -1761,7 +1761,7 @@ export default function DocsPage() {
                     <div className="dropdown-menu dropdown-menu-end py-0">
                       <div className="dropdown-menu-header border-bottom py-50">
                         <div className="dropdown-header d-flex align-items-center py-2">
-                            <h6 className="mb-0 me-auto">Visora Service</h6>
+                            <h6 className="mb-0 me-auto">Vallzx Service</h6>
                           <a href="javascript:void(0)" className="btn btn-text-secondary rounded-pill btn-icon dropdown-shortcuts-add"><i className="ri ri-layout-grid-line ri ri-24px text-heading"></i></a>
                         </div>
                       </div>
@@ -1904,7 +1904,7 @@ export default function DocsPage() {
                     <div className="card">
                       <div className="card-body text-nowrap">
                         <h5 className="card-title mb-0 flex-wrap text-nowrap">Welcome user! 🎉</h5>
-                          <p className="mb-2">To Visora APIs</p>
+                          <p className="mb-2">To Vallzx APIs</p>
                         <h4 className="text-primary mb-0" id="visitors">{stats.total_visitors}</h4>
                         <p className="mb-2">Total visitor 🚀</p>
                         <a href="https://whatsapp.com/channel/0029Vb7fXyMId7nQmJJx1U1L" className="btn btn-sm btn-primary" target="_blank">Join Channel</a>

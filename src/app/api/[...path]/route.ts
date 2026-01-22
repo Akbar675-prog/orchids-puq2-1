@@ -17,20 +17,19 @@ const USER_AGENTS = [
   "Mozilla/5.0 (iPhone; CPU iPhone OS 17_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Mobile/15E148 Safari/604.1",
 ];
 
-function deepReplaceBranding(obj: any): any {
+function replaceCreator(obj: any): any {
   if (Array.isArray(obj)) {
-    return obj.map(deepReplaceBranding);
+    return obj.map(replaceCreator);
   } else if (typeof obj === "object" && obj !== null) {
     const newObj: any = {};
     for (const key in obj) {
-      newObj[key] = deepReplaceBranding(obj[key]);
+      if (key === "creator" && (obj[key] === "api.visora.my.id" || obj[key] === "visora")) {
+        newObj[key] = "vallzx_service-id";
+      } else {
+        newObj[key] = replaceCreator(obj[key]);
+      }
     }
     return newObj;
-  } else if (typeof obj === "string") {
-    return obj
-      .replace(/api\.vreden\.my\.id/gi, "api.visora.my.id")
-      .replace(/vreden/gi, "visora")
-      .replace(/vallzx/gi, "visora");
   }
   return obj;
 }
@@ -124,9 +123,8 @@ async function handleProxy(
     if (contentType && contentType.includes("application/json")) {
       const text = await response.text();
       try {
-          let data = JSON.parse(text);
-          data = deepReplaceBranding(data);
-
+        let data = JSON.parse(text);
+        data = replaceCreator(data);
         
         await incrementStat("total_success");
         await logApiRequest({
@@ -152,7 +150,7 @@ async function handleProxy(
           });
           return prettyJson({ 
             status: false, 
-            creator: "visora_service-id",
+            creator: "vallzx_service-id",
             error: "Request blocked by provider security. Try again later." 
           }, 403);
         }
@@ -216,7 +214,7 @@ async function handleProxy(
           });
           return prettyJson({ 
             status: false, 
-            creator: "visora_service-id",
+            creator: "vallzx_service-id",
             error: "Provider security block detected." 
           }, response.status);
         }
@@ -250,7 +248,7 @@ async function handleProxy(
     });
     return prettyJson({ 
       status: false,
-      creator: "visora_service-id",
+      creator: "vallzx_service-id",
       error: "Internal Server Error" 
     }, 500);
   }

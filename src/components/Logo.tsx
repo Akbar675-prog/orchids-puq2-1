@@ -15,7 +15,7 @@ export const Logo = ({
       src={src} 
       width={width} 
       height={height} 
-        alt="Visora APIs Logo" 
+        alt="Vallzx APIs Logo" 
         style={{ 
           maxWidth: '100%', 
           height: height ? height : 'auto',

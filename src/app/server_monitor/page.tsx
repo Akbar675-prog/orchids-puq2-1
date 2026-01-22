@@ -921,7 +921,7 @@ if (weeklyChartRef.current) weeklyChartRef.current.destroy();
                 Last updated: {lastUpdate.toLocaleString('id-ID')} • Data refreshes every 5 seconds
               </p>
               <p className="text-muted small mb-0">
-                © {new Date().getFullYear()} • Visora APIs Server Monitor
+                © {new Date().getFullYear()} • Vallzx APIs Server Monitor
               </p>
             </div>
           </div>

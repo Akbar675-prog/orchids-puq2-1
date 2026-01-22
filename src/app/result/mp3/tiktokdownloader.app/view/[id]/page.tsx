@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!data) {
     return {
-      title: "Audio Not Found - Visora APIs",
+      title: "Audio Not Found - Vallzx APIs",
       description: "The requested audio could not be found.",
     };
   }
@@ -36,11 +36,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const thumbnail = data.thumbnail_url || "https://visora-dev-assets-id.assetsvsiddev.workers.dev/small-favicon/favicon-small.png";
 
   return {
-      title: `${title} - TikTok MP3 Download | Visora APIs`,
-      description: `Download TikTok audio by Visora API. ${title}`,
+      title: `${title} - TikTok MP3 Download | Vallzx APIs`,
+      description: `Download TikTok audio by Vallzx API. ${title}`,
       openGraph: {
         title: `${title} - TikTok MP3 Download`,
-        description: `Download TikTok audio by Visora API`,
+        description: `Download TikTok audio by Vallzx API`,
         type: "music.song",
         images: [
           {
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       twitter: {
         card: "summary_large_image",
         title: `${title} - TikTok MP3 Download`,
-        description: `Download TikTok audio by Visora API`,
+        description: `Download TikTok audio by Vallzx API`,
         images: [thumbnail],
       },
     };

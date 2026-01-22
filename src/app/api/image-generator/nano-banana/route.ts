@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
   if (!prompt) {
     return prettyJson({
       status: false,
-      creator: "Visora",
+      creator: "Vallzx",
       error: "Parameter 'prompt' is required",
       usage: {
         endpoint: "/api/image-generator/nano-banana",
@@ -39,7 +39,7 @@ export async function GET(req: NextRequest) {
   if (!validPositions.includes(position)) {
     return prettyJson({
       status: false,
-      creator: "Visora",
+      creator: "Vallzx",
       error: `Invalid position. Valid values: ${validPositions.join(", ")}`
     }, 400);
   }
@@ -155,7 +155,7 @@ export async function GET(req: NextRequest) {
     });
     return prettyJson({
       status: false,
-      creator: "Visora",
+      creator: "Vallzx",
       error: error.message || "Terjadi kesalahan saat generate gambar"
     }, 500);
   }

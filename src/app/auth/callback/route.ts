@@ -40,7 +40,7 @@ export async function GET(request: NextRequest) {
             .eq("token", tokenToAssign);
         } else {
           // Generate a random token
-          tokenToAssign = "VISORA-" + Math.random().toString(36).substring(2, 15).toUpperCase();
+          tokenToAssign = "VREDEN-" + Math.random().toString(36).substring(2, 15).toUpperCase();
         }
 
         await supabase.from("profiles").upsert({
