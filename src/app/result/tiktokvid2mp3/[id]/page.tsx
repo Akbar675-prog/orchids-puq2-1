@@ -44,7 +44,7 @@ export default function TikTokResultPage() {
               <li>
                 <div className="btn btn-primary px-2 px-sm-4 px-lg-2 px-xl-4">
                   <span className="icon-base ri ri-user-line me-md-1 icon-18px"></span>
-                  <span className="d-none d-md-block">Vallzx APIs Active</span>
+                  <span className="d-none d-md-block">Visora APIs Active</span>
                 </div>
               </li>
             </ul>
@@ -54,7 +54,7 @@ export default function TikTokResultPage() {
 
       <section id="landingHero" className="section-py landing-hero position-relative">
         <img
-          src="https://api.vreden.my.id/assets/img/front-pages/backgrounds/hero-bg-light.png"
+          src="https://api.visora.my.id/assets/img/front-pages/backgrounds/hero-bg-light.png"
           alt="hero background"
           className="position-absolute top-0 start-0 w-100 h-100 z-n1"
           data-app-light-img="front-pages/backgrounds/hero-bg-light.png"

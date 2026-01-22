@@ -17,19 +17,20 @@ const USER_AGENTS = [
   "Mozilla/5.0 (iPhone; CPU iPhone OS 17_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Mobile/15E148 Safari/604.1",
 ];
 
-function replaceCreator(obj: any): any {
+function deepReplaceBranding(obj: any): any {
   if (Array.isArray(obj)) {
-    return obj.map(replaceCreator);
+    return obj.map(deepReplaceBranding);
   } else if (typeof obj === "object" && obj !== null) {
     const newObj: any = {};
     for (const key in obj) {
-      if (key === "creator" && (obj[key] === "api.vreden.my.id" || obj[key] === "vreden")) {
-        newObj[key] = "vallzx_service-id";
-      } else {
-        newObj[key] = replaceCreator(obj[key]);
-      }
+      newObj[key] = deepReplaceBranding(obj[key]);
     }
     return newObj;
+  } else if (typeof obj === "string") {
+    return obj
+      .replace(/api\.vreden\.my\.id/gi, "api.visora.my.id")
+      .replace(/vreden/gi, "visora")
+      .replace(/vallzx/gi, "visora");
   }
   return obj;
 }
@@ -62,7 +63,7 @@ async function handleProxy(
     targetPath = `v1/${targetPath}`;
   }
   
-  const url = `https://api.vreden.my.id/api/${targetPath}${searchParamsString ? `?${searchParamsString}` : ""}`;
+  const url = `https://api.visora.my.id/api/${targetPath}${searchParamsString ? `?${searchParamsString}` : ""}`;
   const method = req.method;
   const userIP = req.headers.get("x-forwarded-for")?.split(",")[0] || "127.0.0.1";
   const realUA = req.headers.get("user-agent") || "browser";
@@ -87,7 +88,7 @@ async function handleProxy(
     headers.set("Sec-Fetch-Mode", "navigate");
     headers.set("Sec-Fetch-Site", "none");
     headers.set("Sec-Fetch-User", "?1");
-    headers.set("Referer", "https://api.vreden.my.id/");
+    headers.set("Referer", "https://api.visora.my.id/");
     
     // Obfuscate IP for provider
     headers.set("X-Forwarded-For", fakeIP);
@@ -123,8 +124,9 @@ async function handleProxy(
     if (contentType && contentType.includes("application/json")) {
       const text = await response.text();
       try {
-        let data = JSON.parse(text);
-        data = replaceCreator(data);
+          let data = JSON.parse(text);
+          data = deepReplaceBranding(data);
+
         
         await incrementStat("total_success");
         await logApiRequest({
@@ -150,7 +152,7 @@ async function handleProxy(
           });
           return prettyJson({ 
             status: false, 
-            creator: "vallzx_service-id",
+            creator: "visora_service-id",
             error: "Request blocked by provider security. Try again later." 
           }, 403);
         }
@@ -214,7 +216,7 @@ async function handleProxy(
           });
           return prettyJson({ 
             status: false, 
-            creator: "vallzx_service-id",
+            creator: "visora_service-id",
             error: "Provider security block detected." 
           }, response.status);
         }
@@ -248,7 +250,7 @@ async function handleProxy(
     });
     return prettyJson({ 
       status: false,
-      creator: "vallzx_service-id",
+      creator: "visora_service-id",
       error: "Internal Server Error" 
     }, 500);
   }

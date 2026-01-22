@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/auth/:path*",
-        destination: "https://api.vreden.my.id/auth/:path*",
+        destination: "https://api.visora.my.id/auth/:path*",
       },
     ];
   },

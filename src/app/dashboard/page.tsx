@@ -241,7 +241,7 @@ export default function DocsPage() {
       const html = document.documentElement;
       html.className = "layout-navbar-fixed layout-menu-fixed layout-compact";
       html.setAttribute("data-template", "vertical-menu-template");
-      html.setAttribute("data-assets-path", "https://api.vreden.my.id/assets/");
+      html.setAttribute("data-assets-path", "https://api.visora.my.id/assets/");
 
       const identifyDevice = (userAgent: string, info?: any) => {
         if (info?.platform && info.platform !== 'Unknown') return info.platform.toLowerCase();
@@ -265,19 +265,19 @@ export default function DocsPage() {
 
       const getDeviceIcon = (device: string) => {
         const icons: { [key: string]: string } = {
-          axios: "https://api.vreden.my.id/assets/svg/brands/axios.svg",
-          fetch: "https://api.vreden.my.id/assets/svg/brands/js.svg",
-          android: "https://api.vreden.my.id/assets/svg/brands/android.svg",
-          iPhone: "https://api.vreden.my.id/assets/svg/brands/apple.svg",
-          iPad: "https://api.vreden.my.id/assets/svg/brands/apple.svg",
-          mac: "https://api.vreden.my.id/assets/svg/brands/apple.svg",
-          linux: "https://api.vreden.my.id/assets/svg/brands/linux.svg",
-          windows: "https://api.vreden.my.id/assets/svg/brands/windows.svg",
-          chrome: "https://api.vreden.my.id/assets/svg/brands/chrome.svg",
-          firefox: "https://api.vreden.my.id/assets/svg/brands/firefox.svg",
-          safari: "https://api.vreden.my.id/assets/svg/brands/safari.svg",
-          edge: "https://api.vreden.my.id/assets/svg/brands/edge.svg",
-          opera: "https://api.vreden.my.id/assets/svg/brands/opera.svg",
+          axios: "https://api.visora.my.id/assets/svg/brands/axios.svg",
+          fetch: "https://api.visora.my.id/assets/svg/brands/js.svg",
+          android: "https://api.visora.my.id/assets/svg/brands/android.svg",
+          iPhone: "https://api.visora.my.id/assets/svg/brands/apple.svg",
+          iPad: "https://api.visora.my.id/assets/svg/brands/apple.svg",
+          mac: "https://api.visora.my.id/assets/svg/brands/apple.svg",
+          linux: "https://api.visora.my.id/assets/svg/brands/linux.svg",
+          windows: "https://api.visora.my.id/assets/svg/brands/windows.svg",
+          chrome: "https://api.visora.my.id/assets/svg/brands/chrome.svg",
+          firefox: "https://api.visora.my.id/assets/svg/brands/firefox.svg",
+          safari: "https://api.visora.my.id/assets/svg/brands/safari.svg",
+          edge: "https://api.visora.my.id/assets/svg/brands/edge.svg",
+          opera: "https://api.visora.my.id/assets/svg/brands/opera.svg",
         };
         return icons[device] || null;
       };
@@ -359,10 +359,10 @@ export default function DocsPage() {
       const fetchInitialStats = async () => {
         try {
           let url = "/api/stats";
-          const hasBeenCounted = localStorage.getItem("vreden_visitor_counted");
+          const hasBeenCounted = localStorage.getItem("visora_visitor_counted");
           if (!hasBeenCounted) {
             url += "?visitor=true";
-            localStorage.setItem("vreden_visitor_counted", "true");
+            localStorage.setItem("visora_visitor_counted", "true");
           }
           const response = await fetch(url);
           const data = await response.json();
@@ -515,26 +515,26 @@ export default function DocsPage() {
         `}</style>
 
       {/* External CSS Assets */}
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/fonts/iconify-icons.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/node-waves/node-waves.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/pickr/pickr-themes.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/css/core.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/css/demo.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/apex-charts/apex-charts.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/fonts/iconify-icons.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/node-waves/node-waves.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/pickr/pickr-themes.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/css/core.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/css/demo.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/apex-charts/apex-charts.css" />
 
       {/* Scripts */}
-      <Script src="https://api.vreden.my.id/assets/vendor/js/helpers.js" strategy="beforeInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/js/helpers.js" strategy="beforeInteractive" />
       <Script src="/js/customizer.js" strategy="beforeInteractive" />
-      <Script src="https://api.vreden.my.id/assets/js/config.js" strategy="beforeInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/jquery/jquery.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/popper/popper.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/js/bootstrap.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/node-waves/node-waves.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/js/menu.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/apex-charts/apexcharts.js" strategy="afterInteractive" />
-        <Script src="https://api.vreden.my.id/assets/js/main.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/js/config.js" strategy="beforeInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/jquery/jquery.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/popper/popper.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/js/bootstrap.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/node-waves/node-waves.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/js/menu.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/apex-charts/apexcharts.js" strategy="afterInteractive" />
+        <Script src="https://api.visora.my.id/assets/js/main.js" strategy="afterInteractive" />
         <Script id="theme-switcher" strategy="afterInteractive">{`
           (function() {
             function setTheme(theme) {
@@ -615,7 +615,7 @@ export default function DocsPage() {
                 </a>
                 <ul className="menu-sub">
                   <li className="menu-item">
-                    <a href="https://vreden-api-root-page.vercel.app" target="_blank" className="menu-link">
+                    <a href="https://visora-api-root-page.vercel.app" target="_blank" className="menu-link">
                       <div data-i18n="Canvas">Canvas</div>
                     </a>
                   </li>
@@ -625,7 +625,7 @@ export default function DocsPage() {
                     </a>
                   </li>
                   <li className="menu-item">
-                    <a href="https://vreden-api-root-page.vercel.app" target="_blank" className="menu-link">
+                    <a href="https://visora-api-root-page.vercel.app" target="_blank" className="menu-link">
                       <div data-i18n="YouTube">YouTube</div>
                     </a>
                   </li>
@@ -791,7 +791,7 @@ export default function DocsPage() {
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/search/google/image?query=Vreden Bot" target="_blank" className="menu-link">
+                          <a href="/api/search/google/image?query=Visora Bot" target="_blank" className="menu-link">
                               <div data-i18n="Google Image">Google Image</div>
                           </a>
                       </li>
@@ -801,7 +801,7 @@ export default function DocsPage() {
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/search/google?query=Vreden Bot&count=10" target="_blank" className="menu-link">
+                          <a href="/api/search/google?query=Visora Bot&count=10" target="_blank" className="menu-link">
                               <div data-i18n="Google Search">Google Search</div>
                           </a>
                       </li>
@@ -1086,7 +1086,7 @@ export default function DocsPage() {
                             </a>
                         </li>
                         <li className="menu-item">
-                            <a href="/api/artificial/botika?prompt=hai&username=vreden123" target="_blank" className="menu-link">
+                            <a href="/api/artificial/botika?prompt=hai&username=visora123" target="_blank" className="menu-link">
                                 <div data-i18n="Botika">Botika</div>
                             </a>
                         </li>
@@ -1340,152 +1340,152 @@ export default function DocsPage() {
                   </a>
                   <ul className="menu-sub">
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/glitchtext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/glitchtext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Glitch Text">Glitch Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/writetext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/writetext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Write Text">Write Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/advancedglow?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/advancedglow?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Advanced Glow">Advanced Glow</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/typographytext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/typographytext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Typography Text">Typography Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/pixelglitch?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/pixelglitch?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Pixel Glitch">Pixel Glitch</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/neonglitch?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/neonglitch?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Neon Glitch">Neon Glitch</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/flagtext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/flagtext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Flag Text">Flag Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/flag3dtext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/flag3dtext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Flag 3D Text">Flag 3D Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/deletingtext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/deletingtext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Deleting Text">Deleting Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/blackpinkstyle?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/blackpinkstyle?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Blackpink Style">Blackpink Style</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/glowingtext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/glowingtext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Glowing Text">Glowing Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/underwatertext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/underwatertext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Underwater Text">Underwater Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/logomaker?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/logomaker?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Logo Maker">Logo Maker</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/cartoonstyle?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/cartoonstyle?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Cartoon Style">Cartoon Style</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/papercutstyle?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/papercutstyle?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Papercut Style">Papercut Style</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/watercolortext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/watercolortext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Watercolor Text">Watercolor Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/effectclouds?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/effectclouds?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Effect Clouds">Effect Clouds</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/blackpinklogo?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/blackpinklogo?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Blackpink Logo">Blackpink Logo</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/gradienttext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/gradienttext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Gradient Text">Gradient Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/summerbeach?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/summerbeach?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Summer Beach">Summer Beach</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/luxurygold?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/luxurygold?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Luxury Gold">Luxury Gold</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/multicoloredneon?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/multicoloredneon?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Multicolored Neon">Multicolored Neon</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/sandsummer?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/sandsummer?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Sand Summer">Sand Summer</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/galaxywallpaper?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/galaxywallpaper?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Galaxy Wallpaper">Galaxy Wallpaper</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/1917style?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/1917style?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="1917 Style">1917 Style</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/makingneon?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/makingneon?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Making Neon">Making Neon</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/royaltext?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/royaltext?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Royal Text">Royal Text</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/freecreate?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/freecreate?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Free Create">Free Create</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/galaxystyle?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/galaxystyle?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Galaxy Style">Galaxy Style</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/maker/ephoto/lighteffects?text=vreden" target="_blank" className="menu-link">
+                          <a href="/api/maker/ephoto/lighteffects?text=visora" target="_blank" className="menu-link">
                               <div data-i18n="Light Effects">Light Effects</div>
                           </a>
                       </li>
@@ -1534,7 +1534,7 @@ export default function DocsPage() {
                                     </a>
                                 </li>
                                 <li className="menu-item">
-                                    <a href="/api/maker/ff-lobby-gen?text=Vreden" target="_blank" className="menu-link">
+                                    <a href="/api/maker/ff-lobby-gen?text=Visora" target="_blank" className="menu-link">
                                         <div data-i18n="FF Lobby Generator">FF Lobby Generator</div>
                                         <div className="badge bg-label-info fs-tiny rounded-pill ms-auto">Lobby FF</div>
                                     </a>
@@ -1568,7 +1568,7 @@ export default function DocsPage() {
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/stalker/pinterest?username=vreden" target="_blank" className="menu-link">
+                          <a href="/api/stalker/pinterest?username=visora" target="_blank" className="menu-link">
                               <div data-i18n="Pinterest">Pinterest</div>
                           </a>
                       </li>
@@ -1609,22 +1609,22 @@ export default function DocsPage() {
                   </a>
                   <ul className="menu-sub">
                       <li className="menu-item">
-                          <a href="/api/tools/checkdns?domain=vreden-api-root-page.vercel.app" target="_blank" className="menu-link">
+                          <a href="/api/tools/checkdns?domain=visora-api-root-page.vercel.app" target="_blank" className="menu-link">
                               <div data-i18n="Check DNS">Check DNS</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/tools/checkhost?domain=https://vreden-api-root-page.vercel.app" target="_blank" className="menu-link">
+                          <a href="/api/tools/checkhost?domain=https://visora-api-root-page.vercel.app" target="_blank" className="menu-link">
                               <div data-i18n="Check Host">Check Host</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/tools/checkping?domain=https://vreden-api-root-page.vercel.app" target="_blank" className="menu-link">
+                          <a href="/api/tools/checkping?domain=https://visora-api-root-page.vercel.app" target="_blank" className="menu-link">
                               <div data-i18n="Check Ping">Check Ping</div>
                           </a>
                       </li>
                       <li className="menu-item">
-                          <a href="/api/tools/checktcp?domain=https://vreden-api-root-page.vercel.app" target="_blank" className="menu-link">
+                          <a href="/api/tools/checktcp?domain=https://visora-api-root-page.vercel.app" target="_blank" className="menu-link">
                               <div data-i18n="Check TCP">Check TCP</div>
                           </a>
                       </li>
@@ -1674,14 +1674,14 @@ export default function DocsPage() {
                           </a>
                       </li>
                         <li className="menu-item">
-                            <a href="/api/tools/screenshot?url=https://vreden-api-root-page.vercel.app&device=laptop&scrollgui=true" target="_blank" className="menu-link">
+                            <a href="/api/tools/screenshot?url=https://visora-api-root-page.vercel.app&device=laptop&scrollgui=true" target="_blank" className="menu-link">
                                 <div data-i18n="Screenshot Site">Screenshot Site</div>
                                 <div className="badge bg-label-info fs-tiny rounded-pill ms-auto">New Params</div>
                             </a>
                         </li>
 
                               <li className="menu-item">
-                                  <a href="/api/tools/shortlink?url=https://vreden-api-root-page.vercel.app&type=vurl" target="_blank" className="menu-link">
+                                  <a href="/api/tools/shortlink?url=https://visora-api-root-page.vercel.app&type=vurl" target="_blank" className="menu-link">
                                       <div data-i18n="Shortlink">Shortlink</div>
                                   </a>
                               </li>
@@ -1761,7 +1761,7 @@ export default function DocsPage() {
                     <div className="dropdown-menu dropdown-menu-end py-0">
                       <div className="dropdown-menu-header border-bottom py-50">
                         <div className="dropdown-header d-flex align-items-center py-2">
-                            <h6 className="mb-0 me-auto">Vallzx Service</h6>
+                            <h6 className="mb-0 me-auto">Visora Service</h6>
                           <a href="javascript:void(0)" className="btn btn-text-secondary rounded-pill btn-icon dropdown-shortcuts-add"><i className="ri ri-layout-grid-line ri ri-24px text-heading"></i></a>
                         </div>
                       </div>
@@ -1771,14 +1771,14 @@ export default function DocsPage() {
                             <span className="dropdown-shortcuts-icon rounded-circle mb-2">
                               <i className="ri ri-dashboard-line ri ri-26px text-heading"></i>
                             </span>
-                            <a href="https://vreden-api-root-page.vercel.app" className="stretched-link" target="_blank">Homepage</a>
+                            <a href="https://visora-api-root-page.vercel.app" className="stretched-link" target="_blank">Homepage</a>
                             <small>Official Website</small>
                           </div>
                           <div className="dropdown-shortcuts-item col">
                             <span className="dropdown-shortcuts-icon rounded-circle mb-2">
                               <i className="ri ri-youtube-line ri ri-26px text-heading"></i>
                             </span>
-                            <a href="https://vreden-api-root-page.vercel.app" className="stretched-link" target="_blank">YouTube</a>
+                            <a href="https://visora-api-root-page.vercel.app" className="stretched-link" target="_blank">YouTube</a>
                             <small>Downloader & Info</small>
                           </div>
                         </div>
@@ -1787,14 +1787,14 @@ export default function DocsPage() {
                             <span className="dropdown-shortcuts-icon rounded-circle mb-2">
                               <i className="ri ri-brush-line ri ri-26px text-heading"></i>
                             </span>
-                            <a href="https://vreden-api-root-page.vercel.app" className="stretched-link" target="_blank">Canvas Editor</a>
+                            <a href="https://visora-api-root-page.vercel.app" className="stretched-link" target="_blank">Canvas Editor</a>
                             <small>Editor Image canvas</small>
                           </div>
                           <div className="dropdown-shortcuts-item col">
                             <span className="dropdown-shortcuts-icon rounded-circle mb-2">
                               <i className="ri ri-server-line ri ri-26px text-heading"></i>
                             </span>
-                            <a href="https://vreden-api-root-page.vercel.app" className="stretched-link" target="_blank">Rest API</a>
+                            <a href="https://visora-api-root-page.vercel.app" className="stretched-link" target="_blank">Rest API</a>
                             <small>Rest Api Free</small>
                           </div>
                         </div>
@@ -1904,12 +1904,12 @@ export default function DocsPage() {
                     <div className="card">
                       <div className="card-body text-nowrap">
                         <h5 className="card-title mb-0 flex-wrap text-nowrap">Welcome user! 🎉</h5>
-                          <p className="mb-2">To Vallzx APIs</p>
+                          <p className="mb-2">To Visora APIs</p>
                         <h4 className="text-primary mb-0" id="visitors">{stats.total_visitors}</h4>
                         <p className="mb-2">Total visitor 🚀</p>
                         <a href="https://whatsapp.com/channel/0029Vb7fXyMId7nQmJJx1U1L" className="btn btn-sm btn-primary" target="_blank">Join Channel</a>
                       </div>
-                      <img src="https://visora-dev-assets-id.assetsvsiddev.workers.dev/small-favicon/favicon-small.png" className="position-absolute bottom-0 end-0 me-5 mb-5" width="83" alt="Vreden Apis" />
+                      <img src="https://visora-dev-assets-id.assetsvsiddev.workers.dev/small-favicon/favicon-small.png" className="position-absolute bottom-0 end-0 me-5 mb-5" width="83" alt="Visora Apis" />
                     </div>
                   </div>
                     <div className="col-lg-8">

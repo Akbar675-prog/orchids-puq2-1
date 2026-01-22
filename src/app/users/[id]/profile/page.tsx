@@ -105,7 +105,7 @@ export default function UserProfilePage() {
     const html = document.documentElement;
     html.className = "layout-navbar-fixed layout-menu-fixed layout-compact";
     html.setAttribute("data-template", "vertical-menu-template");
-    html.setAttribute("data-assets-path", "https://api.vreden.my.id/assets/");
+    html.setAttribute("data-assets-path", "https://api.visora.my.id/assets/");
 
     return () => {
       html.className = "layout-navbar-fixed layout-wide";
@@ -303,9 +303,9 @@ export default function UserProfilePage() {
     if (loading) {
     return (
       <>
-        <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/fonts/iconify-icons.css" />
-        <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/css/core.css" />
-        <link rel="stylesheet" href="https://api.vreden.my.id/assets/css/demo.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/fonts/iconify-icons.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/css/core.css" />
+        <link rel="stylesheet" href="https://api.visora.my.id/assets/css/demo.css" />
         <style>{`
           :root {
             --main-color: #4361EE;
@@ -384,24 +384,24 @@ export default function UserProfilePage() {
 
   return (
     <>
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/fonts/iconify-icons.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/node-waves/node-waves.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/pickr/pickr-themes.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/css/core.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/css/demo.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/fonts/iconify-icons.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/node-waves/node-waves.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/pickr/pickr-themes.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/css/core.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/css/demo.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossOrigin="" />
 
-      <Script src="https://api.vreden.my.id/assets/vendor/js/helpers.js" strategy="beforeInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/js/helpers.js" strategy="beforeInteractive" />
       <Script src="/js/customizer.js" strategy="beforeInteractive" />
-      <Script src="https://api.vreden.my.id/assets/js/config.js" strategy="beforeInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/jquery/jquery.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/popper/popper.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/js/bootstrap.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/node-waves/node-waves.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/js/menu.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/js/main.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/js/config.js" strategy="beforeInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/jquery/jquery.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/popper/popper.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/js/bootstrap.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/node-waves/node-waves.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/js/menu.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/js/main.js" strategy="afterInteractive" />
       <Script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossOrigin="" strategy="afterInteractive" />
       <Script id="theme-switcher" strategy="afterInteractive">{`
         (function() {

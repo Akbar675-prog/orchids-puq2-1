@@ -726,7 +726,7 @@ if (weeklyChartRef.current) weeklyChartRef.current.destroy();
                   <div className="d-flex justify-content-between align-items-center mb-4">
                     <div>
                       <div className="section-title-icon justify-content-start">
-                        <img src="https://api.vreden.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
+                        <img src="https://api.visora.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
                         <span className="text-uppercase small fw-semibold" style={{ color: '#1e293b' }}>Analytics</span>
                       </div>
                       <h5 className="mb-1 fw-bold">Weekly API Usage</h5>
@@ -742,7 +742,7 @@ if (weeklyChartRef.current) weeklyChartRef.current.destroy();
               <div className="col-lg-4">
                 <div className="monitor-card p-4 h-100">
                   <div className="section-title-icon justify-content-start mb-3">
-                    <img src="https://api.vreden.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
+                    <img src="https://api.visora.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
                     <span className="text-uppercase small fw-semibold" style={{ color: '#1e293b' }}>Distribution</span>
                   </div>
                   <h5 className="mb-1 fw-bold">Top APIs</h5>
@@ -756,7 +756,7 @@ if (weeklyChartRef.current) weeklyChartRef.current.destroy();
               <div className="col-lg-4">
                 <div className="monitor-card p-4 h-100">
                   <div className="section-title-icon justify-content-start mb-3">
-                    <img src="https://api.vreden.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
+                    <img src="https://api.visora.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
                     <span className="text-uppercase small fw-semibold" style={{ color: '#1e293b' }}>Hardware</span>
                   </div>
                   <h5 className="mb-4 fw-bold">Server Specifications</h5>
@@ -827,7 +827,7 @@ if (weeklyChartRef.current) weeklyChartRef.current.destroy();
               <div className="col-lg-4">
                 <div className="monitor-card p-4 h-100">
                   <div className="section-title-icon justify-content-start mb-3">
-                    <img src="https://api.vreden.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
+                    <img src="https://api.visora.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
                     <span className="text-uppercase small fw-semibold" style={{ color: '#1e293b' }}>Resources</span>
                   </div>
                   <h5 className="mb-4 fw-bold">Memory Usage</h5>
@@ -882,7 +882,7 @@ if (weeklyChartRef.current) weeklyChartRef.current.destroy();
                       transition: 'opacity 0.3s ease'
                     }}></div>
                     <div className="section-title-icon justify-content-start mb-3">
-                      <img src="https://api.vreden.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
+                      <img src="https://api.visora.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
                       <span className="text-uppercase small fw-semibold" style={{ color: '#1e293b' }}>Rankings</span>
                     </div>
                     <h5 className="mb-1 fw-bold">Top APIs</h5>
@@ -898,7 +898,7 @@ if (weeklyChartRef.current) weeklyChartRef.current.destroy();
                   <div className="d-flex justify-content-between align-items-center flex-wrap gap-3">
                     <div>
                       <div className="section-title-icon justify-content-start mb-2">
-                        <img src="https://api.vreden.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
+                        <img src="https://api.visora.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="icon" height="16" />
                         <span className="text-uppercase small fw-semibold" style={{ color: '#1e293b' }}>Today</span>
                       </div>
                       <h5 className="mb-1 fw-bold">Today&apos;s Requests</h5>
@@ -921,7 +921,7 @@ if (weeklyChartRef.current) weeklyChartRef.current.destroy();
                 Last updated: {lastUpdate.toLocaleString('id-ID')} • Data refreshes every 5 seconds
               </p>
               <p className="text-muted small mb-0">
-                © {new Date().getFullYear()} • Vallzx APIs Server Monitor
+                © {new Date().getFullYear()} • Visora APIs Server Monitor
               </p>
             </div>
           </div>

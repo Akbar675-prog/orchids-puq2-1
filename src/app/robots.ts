@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Sitemap {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://vreden-api-root-page.vercel.app/sitemap.xml',
+    sitemap: 'https://visora-api-root-page.vercel.app/sitemap.xml',
   }
 }

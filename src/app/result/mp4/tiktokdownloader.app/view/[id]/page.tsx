@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!data) {
     return {
-      title: "Video Not Found - Vallzx APIs",
+      title: "Video Not Found - Visora APIs",
       description: "The requested video could not be found.",
     };
   }
@@ -36,11 +36,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const thumbnail = data.thumbnail_url || "https://visora-dev-assets-id.assetsvsiddev.workers.dev/small-favicon/favicon-small.png";
 
   return {
-      title: `${title} - TikTok Download | Vallzx APIs`,
-      description: `Download TikTok video by Vallzx API. ${title}`,
+      title: `${title} - TikTok Download | Visora APIs`,
+      description: `Download TikTok video by Visora API. ${title}`,
       openGraph: {
         title: `${title} - TikTok Download`,
-        description: `Download TikTok video by Vallzx API`,
+        description: `Download TikTok video by Visora API`,
       type: "video.other",
       images: [
         {
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     twitter: {
         card: "summary_large_image",
         title: `${title} - TikTok Download`,
-        description: `Download TikTok video by Vallzx API`,
+        description: `Download TikTok video by Visora API`,
         images: [thumbnail],
       },
   };

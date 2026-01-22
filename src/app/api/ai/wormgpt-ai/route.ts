@@ -33,7 +33,7 @@ export async function GET(req: NextRequest) {
 
       return prettyJson({
         status: true,
-        creator: "Vallzx",
+        creator: "Visora",
         result: data.choices?.[0]?.message?.content || data.result || data.message || data
       });
   } catch (error: any) {

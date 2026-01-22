@@ -156,7 +156,7 @@ export default function PlanPage() {
     const html = document.documentElement;
     html.className = "layout-navbar-fixed layout-menu-fixed layout-compact";
     html.setAttribute("data-template", "vertical-menu-template");
-    html.setAttribute("data-assets-path", "https://api.vreden.my.id/assets/");
+    html.setAttribute("data-assets-path", "https://api.visora.my.id/assets/");
 
     const checkUser = async () => {
       const { data: { user } } = await supabaseClient.auth.getUser();
@@ -172,23 +172,23 @@ export default function PlanPage() {
 
   return (
     <>
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/fonts/iconify-icons.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/node-waves/node-waves.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/pickr/pickr-themes.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/css/core.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/css/demo.css" />
-      <link rel="stylesheet" href="https://api.vreden.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/fonts/iconify-icons.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/node-waves/node-waves.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/pickr/pickr-themes.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/css/core.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/css/demo.css" />
+      <link rel="stylesheet" href="https://api.visora.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-      <Script src="https://api.vreden.my.id/assets/vendor/js/helpers.js" strategy="beforeInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/js/helpers.js" strategy="beforeInteractive" />
       <Script src="/js/customizer.js" strategy="beforeInteractive" />
-      <Script src="https://api.vreden.my.id/assets/js/config.js" strategy="beforeInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/jquery/jquery.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/popper/popper.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/js/bootstrap.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/node-waves/node-waves.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/vendor/js/menu.js" strategy="afterInteractive" />
-      <Script src="https://api.vreden.my.id/assets/js/main.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/js/config.js" strategy="beforeInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/jquery/jquery.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/popper/popper.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/js/bootstrap.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/node-waves/node-waves.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/vendor/js/menu.js" strategy="afterInteractive" />
+      <Script src="https://api.visora.my.id/assets/js/main.js" strategy="afterInteractive" />
       <Script id="theme-switcher" strategy="afterInteractive">{`
         (function() {
           function setTheme(theme) {
@@ -340,7 +340,7 @@ export default function PlanPage() {
               <div className="container-xxl flex-grow-1 container-p-y">
                 <div className="text-center mb-6">
                   <h6 className="d-flex justify-content-center align-items-center mb-3">
-                    <img src="https://api.vreden.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="section title icon" className="me-2" height="19" />
+                    <img src="https://api.visora.my.id/assets/img/front-pages/icons/section-title-icon.png" alt="section title icon" className="me-2" height="19" />
                     <span className="text-uppercase text-muted">Daftar Plan & Fitur Layanan</span>
                   </h6>
                   <h4 className="mb-2">Pilih Plan yang <span className="text-primary">Sesuai</span></h4>
@@ -481,7 +481,7 @@ export default function PlanPage() {
                   <div className="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
                     <div className="text-body">
                       © {new Date().getFullYear()} • Build on{" "}
-                      <a href="/" className="footer-link">Vallzx APIs</a>
+                      <a href="/" className="footer-link">Visora APIs</a>
                     </div>
                   </div>
                 </div>

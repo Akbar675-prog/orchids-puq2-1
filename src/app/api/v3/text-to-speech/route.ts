@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
 
   if (!text) {
     return prettyJson(
-      { status: false, creator: "vallzx_service-id", error: "Missing text parameter" },
+      { status: false, creator: "visora_service-id", error: "Missing text parameter" },
       400
     );
   }
@@ -29,7 +29,7 @@ export async function GET(req: NextRequest) {
     const apiKeys = (process.env.ELEVENLABS_API_KEYS || process.env.ELEVENLABS_API_KEY || "").split(",").filter(Boolean);
     if (apiKeys.length === 0) {
       return prettyJson(
-        { status: false, creator: "vallzx_service-id", error: "ELEVENLABS_API_KEYS is not configured" },
+        { status: false, creator: "visora_service-id", error: "ELEVENLABS_API_KEYS is not configured" },
         500
       );
     }
@@ -120,7 +120,7 @@ export async function GET(req: NextRequest) {
     });
     
     return prettyJson(
-      { status: false, creator: "vallzx_service-id", error: lastError },
+      { status: false, creator: "visora_service-id", error: lastError },
       lastStatus
     );
   }

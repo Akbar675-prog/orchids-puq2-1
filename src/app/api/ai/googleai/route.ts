@@ -57,7 +57,7 @@ export async function GET(req: NextRequest) {
 
     return prettyJson({
       status: true,
-      creator: "Vallzx APIs",
+      creator: "Visora APIs",
       provider: "google.com",
       type,
       result: data

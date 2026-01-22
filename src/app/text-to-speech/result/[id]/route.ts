@@ -14,7 +14,7 @@ export async function GET(
 
   if (error || !data) {
     return NextResponse.json(
-      { status: false, creator: "vallzx_service-id", error: "File not found" },
+      { status: false, creator: "visora_service-id", error: "File not found" },
       { status: 404 }
     );
   }

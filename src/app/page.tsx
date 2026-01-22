@@ -65,10 +65,10 @@ export default function Home() {
     const fetchInitialStats = async () => {
       try {
         let url = "/api/stats";
-        const hasBeenCounted = localStorage.getItem("vreden_visitor_counted");
+        const hasBeenCounted = localStorage.getItem("visora_visitor_counted");
         if (!hasBeenCounted) {
           url += "?visitor=true";
-          localStorage.setItem("vreden_visitor_counted", "true");
+          localStorage.setItem("visora_visitor_counted", "true");
         }
         const response = await fetch(url);
         const data = await response.json();
@@ -353,12 +353,12 @@ export default function Home() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebAPI",
-                "name": "Vallzx APIs",
-                "description": "Vallzx API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
-                "documentation": "https://api.vreden.my.id/dashboard",
+                "name": "Visora APIs",
+                "description": "Visora API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
+                "documentation": "https://api.visora.my.id/dashboard",
                 "provider": {
                   "@type": "Organization",
-                  "name": "Vallzx"
+                  "name": "Visora"
                 }
               })
             }}
@@ -371,7 +371,7 @@ export default function Home() {
                   <a href="/" className="app-brand-link">
                     <span className="app-brand-logo demo">
                       <span style={{ color: "#9055FD" }}>
-                        <img src="/assets/img/logo.png" alt="Vallzx Official" width="105" />
+                        <img src="/assets/img/logo.png" alt="Visora Official" width="105" />
                       </span>
                     </span>
                   </a>
@@ -449,12 +449,12 @@ export default function Home() {
               <img src="/assets/img/front-pages/backgrounds/hero-bg-light.png" alt="hero background" className="position-absolute top-0 start-0 w-100 h-100 z-n1" data-speed="1" data-app-light-img="front-pages/backgrounds/hero-bg-light.png" data-app-dark-img="front-pages/backgrounds/hero-bg-dark.png" />
               <div className="container">
                 <div className="hero-text-box text-center">
-                    <h3 className="text-rainbow-rgb fs-bold hero-title mb-4">Vallzx APIs</h3>
+                    <h3 className="text-rainbow-rgb fs-bold hero-title mb-4">Visora APIs</h3>
                     <h2 className="h6 mb-8 lh-md">Gratis dan mudah digunakan<br />akses semua situs scraper yang Anda perlukan.</h2>
                     <a href="/dashboard" className="btn btn-lg" style={{ height: "48px", background: "linear-gradient(to right, #4361EE, #1D92F1)", color: "white" }}>Go to Dashboard</a>
                   </div>
                 <div className="position-relative hero-animation-img">
-                  <a href="https://www.vreden.my.id" target="_blank">
+                  <a href="https://www.visora.my.id" target="_blank">
                     <div className="hero-dashboard-img text-center">
                       <img src="/assets/img/front-pages/landing-page/hero-dashboard-light.png" alt="hero dashboard" className="animation-img" data-speed="2" data-app-light-img="front-pages/landing-page/hero-dashboard-light.png" data-app-dark-img="front-pages/landing-page/hero-dashboard-dark.png" />
                     </div>
@@ -477,42 +477,42 @@ export default function Home() {
                 <div className="features-icon-wrapper row gx-0 gy-12 gx-sm-6">
                   <div className="col-lg-4 col-sm-6 text-center features-icon-box">
                     <div className="features-icon mb-4">
-                      <img src="/assets/img/front-pages/icons/terminal.svg" alt="Vallzx APIs" />
+                      <img src="/assets/img/front-pages/icons/terminal.svg" alt="Visora APIs" />
                     </div>
                     <h5 className="mb-2">Result Terbaik</h5>
                     <p className="features-icon-description">Response API berkualitas tinggi dan hampir tidak pernah mengalami error.</p>
                   </div>
                   <div className="col-lg-4 col-sm-6 text-center features-icon-box">
                     <div className="features-icon mb-4">
-                      <img src="/assets/img/front-pages/icons/cpu.svg" alt="Vallzx APIs" />
+                      <img src="/assets/img/front-pages/icons/cpu.svg" alt="Visora APIs" />
                     </div>
                     <h5 className="mb-2">Kecerdasan Buatan</h5>
                     <p className="features-icon-description">Akses ke beberapa platform AI Chat maupun image generator secara free.</p>
                   </div>
                   <div className="col-lg-4 col-sm-6 text-center features-icon-box">
                     <div className="features-icon mb-4">
-                      <img src="/assets/img/front-pages/icons/download-cloud.svg" alt="Vallzx APIs" />
+                      <img src="/assets/img/front-pages/icons/download-cloud.svg" alt="Visora APIs" />
                     </div>
                     <h5 className="mb-2">Download Media</h5>
                     <p className="features-icon-description">Downloader media sosial dengan kualitas terbaik tanpa delay maupun error.</p>
                   </div>
                   <div className="col-lg-4 col-sm-6 text-center features-icon-box">
                     <div className="features-icon mb-4">
-                      <img src="/assets/img/front-pages/icons/award.svg" alt="Vallzx APIs" />
+                      <img src="/assets/img/front-pages/icons/award.svg" alt="Visora APIs" />
                     </div>
                     <h5 className="mb-2">API Terbaik</h5>
                     <p className="features-icon-description">Rest API Terbaik dengan catatan reputasi yang baik tanpa ada riwayat negatif dari users.</p>
                   </div>
                   <div className="col-lg-4 col-sm-6 text-center features-icon-box">
                     <div className="features-icon mb-4">
-                      <img src="/assets/img/front-pages/icons/shield.svg" alt="Vallzx APIs" />
+                      <img src="/assets/img/front-pages/icons/shield.svg" alt="Visora APIs" />
                     </div>
                     <h5 className="mb-2">Api Protected</h5>
                     <p className="features-icon-description">Di lindungi oleh keamanan tingkat tinggi dengan bantuan cloudflare anti down kecuali maintenance.</p>
                   </div>
                   <div className="col-lg-4 col-sm-6 text-center features-icon-box">
                     <div className="features-icon mb-4">
-                      <img src="/assets/img/front-pages/icons/package.svg" alt="Vallzx APIs" />
+                      <img src="/assets/img/front-pages/icons/package.svg" alt="Visora APIs" />
                     </div>
                     <h5 className="mb-2">Premium Package</h5>
                     <p className="features-icon-description">Menggunakan beberapa package premium yang berbayar, tetapi users dapat menikmatinya secara gratis.</p>
@@ -558,19 +558,19 @@ export default function Home() {
                   <div className="col-lg-4 col-sm-6">
                     <p className="text-theme-adaptive">Contoh YouTube Audio:</p>
                     <div className="gist-dark">
-                      <div dangerouslySetInnerHTML={{ __html: `<script src="https://gist.github.com/vreden/aba3d279ca18d23c42767f3559e44d07.js"></script>` }} />
+                      <div dangerouslySetInnerHTML={{ __html: `<script src="https://gist.github.com/visora/aba3d279ca18d23c42767f3559e44d07.js"></script>` }} />
                     </div>
                   </div>
                   <div className="col-lg-4 col-sm-6">
                     <p className="text-theme-adaptive">Contoh Spotify Audio:</p>
                     <div className="gist-dark">
-                      <div dangerouslySetInnerHTML={{ __html: `<script src="https://gist.github.com/vreden/bfeb1c7a26d8d826090787797ae5fab0.js"></script>` }} />
+                      <div dangerouslySetInnerHTML={{ __html: `<script src="https://gist.github.com/visora/bfeb1c7a26d8d826090787797ae5fab0.js"></script>` }} />
                     </div>
                   </div>
                   <div className="col-lg-4 col-sm-6">
                     <p className="text-theme-adaptive">Contoh Google Drive:</p>
                     <div className="gist-dark">
-                      <div dangerouslySetInnerHTML={{ __html: `<script src="https://gist.github.com/vreden/74026eba055817fe4394bd63a52132eb.js"></script>` }} />
+                      <div dangerouslySetInnerHTML={{ __html: `<script src="https://gist.github.com/visora/74026eba055817fe4394bd63a52132eb.js"></script>` }} />
                     </div>
                   </div>
                 </div>
@@ -770,7 +770,7 @@ export default function Home() {
                           <span className="badge bg-label-primary rounded-pill">Bebas Recode</span>
                         </div>
                         <div className="text-center mt-6 pt-2">
-                          <a href="https://github.com/vreden" className="btn btn-outline-primary w-100">Lihat Github</a>
+                          <a href="https://github.com/visora" className="btn btn-outline-primary w-100">Lihat Github</a>
                         </div>
                       </div>
                     </div>
@@ -877,7 +877,7 @@ export default function Home() {
                 <div className="row align-items-center gy-5 gy-lg-0">
                   <div className="col-lg-6 text-center text-lg-start">
                     <h2 className="display-5 text-primary fw-bold mb-0">Siap untuk memulai?</h2>
-                    <p className="fw-medium mb-6 mb-md-8">Buat project kamu dengan Vallzx APIs</p>
+                    <p className="fw-medium mb-6 mb-md-8">Buat project kamu dengan Visora APIs</p>
                     <a href="/dashboard" className="btn btn-lg" style={{ height: "48px", background: "linear-gradient(to right, #4361EE, #1D92F1)", color: "white" }}>Go to Dashboard</a>
                   </div>
                   <div className="col-lg-6 pt-lg-12">
@@ -905,13 +905,13 @@ export default function Home() {
                           <div className="row g-5">
                             <div className="col-md-6">
                               <div className="form-floating form-floating-outline">
-                                <input type="text" className="form-control" id="basic-default-fullname" placeholder="Vallzx" />
+                                <input type="text" className="form-control" id="basic-default-fullname" placeholder="Visora" />
                                 <label htmlFor="basic-default-fullname">Full name</label>
                               </div>
                             </div>
                             <div className="col-md-6">
                               <div className="form-floating form-floating-outline">
-                                <input type="email" className="form-control" id="basic-default-email" placeholder="vallzx@gmail.com" />
+                                <input type="email" className="form-control" id="basic-default-email" placeholder="visora@gmail.com" />
                                 <label htmlFor="basic-default-email">Email address</label>
                               </div>
                             </div>
@@ -941,11 +941,11 @@ export default function Home() {
                     <a href="/dashboard" className="app-brand-link mb-6">
                       <span className="app-brand-logo demo">
                         <span style={{ color: "#9055FD" }}>
-                          <img src="/assets/img/logo.png" alt="Vallzx Official" width="105" />
+                          <img src="/assets/img/logo.png" alt="Visora Official" width="105" />
                         </span>
                       </span>
                     </a>
-                    <p className="footer-text footer-logo-description mb-6">Gratis dan mudah digunakan, akses semua situs scraper yang Anda perlukan. Website ini dibuat dan di kembangkan oleh Vallzx.</p>
+                    <p className="footer-text footer-logo-description mb-6">Gratis dan mudah digunakan, akses semua situs scraper yang Anda perlukan. Website ini dibuat dan di kembangkan oleh Visora.</p>
                     <form className="footer-form" onSubmit={(e) => e.preventDefault()}>
                       <div className="d-flex mt-2 gap-4">
                         <div className="form-floating form-floating-outline w-px-250">
@@ -963,7 +963,7 @@ export default function Home() {
                         <a href="/company" target="_blank" className="footer-link">Company</a>
                       </li>
                       <li className="mb-4">
-                        <a href="https://github.com/vreden" target="_blank" className="footer-link">Github</a>
+                        <a href="https://github.com/visora" target="_blank" className="footer-link">Github</a>
                       </li>
                     </ul>
                   </div>
@@ -994,10 +994,10 @@ export default function Home() {
                 <div className="mb-1 mb-md-0">
                   <div className="mb-2 mb-md-0"> © {new Date().getFullYear()} • Build on{" "}
                     <span className="text-body"><i className="icon-base tf-icons ri ri-cloud-line"></i></span>
-                    <a href="/" target="_blank" className="footer-link text-body">Vallzx APIs</a>
+                    <a href="/" target="_blank" className="footer-link text-body">Visora APIs</a>
                   </div>
                 </div>
-                <span className="mb-2 fs-tiny">Vallzx API Services</span>
+                <span className="mb-2 fs-tiny">Visora API Services</span>
               </div>
             </div>
           </footer>

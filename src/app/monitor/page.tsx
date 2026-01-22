@@ -324,7 +324,7 @@ export default function MonitorPage() {
       <Script src="https://cdn.tailwindcss.com" />
 
       <img
-        src="https://api.vreden.my.id/assets/img/front-pages/backgrounds/hero-bg-light.png"
+        src="https://api.visora.my.id/assets/img/front-pages/backgrounds/hero-bg-light.png"
         alt="hero background"
         className="position-fixed top-0 start-0 w-100 h-100 z-n1 opacity-50"
         style={{ objectFit: 'cover' }}

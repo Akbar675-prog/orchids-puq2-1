@@ -5,22 +5,22 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Vallzx APIs - Layanan RestAPI by Vallzx",
-  description: "Vallzx API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
-  keywords: ["vallzx api", "json api", "javascript api", "downloader api", "social media api", "converter api", "whatsapp bot", "baileys api", "chat api"],
+  title: "Visora APIs - Layanan RestAPI by Visora",
+  description: "Visora API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
+  keywords: ["visora api", "json api", "javascript api", "downloader api", "social media api", "converter api", "whatsapp bot", "baileys api", "chat api"],
   alternates: {
-    canonical: "https://api.vreden.my.id",
+    canonical: "https://api.visora.my.id",
   },
   icons: {
     icon: "https://visora-dev-assets-id.assetsvsiddev.workers.dev/small-favicon/favicon-small.png",
   },
   robots: "index, follow",
-  authors: [{ name: "Vallzx" }],
+  authors: [{ name: "Visora" }],
   openGraph: {
-    title: "Vallzx APIs - Layanan RestAPI by Vallzx",
-    description: "Vallzx API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
-    url: "https://api.vreden.my.id",
-    siteName: "Vallzx APIs",
+    title: "Visora APIs - Layanan RestAPI by Visora",
+    description: "Visora API provides various JSON APIs for JavaScript applications including downloaders, social media tools, search functions, converters, and other utilities.",
+    url: "https://api.visora.my.id",
+    siteName: "Visora APIs",
     type: "website",
     images: [
       {

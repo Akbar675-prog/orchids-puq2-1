@@ -87,7 +87,7 @@ export async function GET(request: NextRequest) {
     if (!prompt) {
       return new Response(JSON.stringify({
         status: false,
-        creator: "Vallzx",
+        creator: "Visora",
         error: "Parameter 'prompt' is required",
         usage: {
           endpoint: "/api/ai/gemini-ai",
@@ -111,7 +111,7 @@ export async function GET(request: NextRequest) {
       } catch {
         return new Response(JSON.stringify({
           status: false,
-          creator: "Vallzx",
+          creator: "Visora",
           error: {
             message: "Invalid 'history' parameter. Must be a valid JSON array.",
             type: "invalid_request_error",
@@ -130,7 +130,7 @@ export async function GET(request: NextRequest) {
     
     return new Response(JSON.stringify({
       status: true,
-      creator: "Vallzx",
+      creator: "Visora",
       model: "gemini-3-pro",
       data: {
         response: responseText,
@@ -152,7 +152,7 @@ export async function GET(request: NextRequest) {
     
     return new Response(JSON.stringify({
       status: false,
-      creator: "Vallzx",
+      creator: "Visora",
       error: {
         message: error instanceof Error ? error.message : "Internal server error",
         type: "api_error",
@@ -172,7 +172,7 @@ export async function POST(request: NextRequest) {
     if (!body) {
       return new Response(JSON.stringify({
         status: false,
-        creator: "Vallzx",
+        creator: "Visora",
         error: {
           message: "Invalid JSON body. Please provide a valid JSON request body.",
           type: "invalid_request_error",
@@ -189,7 +189,7 @@ export async function POST(request: NextRequest) {
     if (!prompt) {
       return new Response(JSON.stringify({
         status: false,
-        creator: "Vallzx",
+        creator: "Visora",
         error: {
           message: "Parameter 'prompt' is required in request body",
           type: "invalid_request_error",
@@ -215,7 +215,7 @@ export async function POST(request: NextRequest) {
     
     return new Response(JSON.stringify({
       status: true,
-      creator: "Vallzx",
+      creator: "Visora",
       model: "gemini-3-pro",
       data: {
         response: responseText,
@@ -237,7 +237,7 @@ export async function POST(request: NextRequest) {
     
     return new Response(JSON.stringify({
       status: false,
-      creator: "Vallzx",
+      creator: "Visora",
       error: {
         message: error instanceof Error ? error.message : "Internal server error",
         type: "api_error",

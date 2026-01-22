@@ -40,7 +40,7 @@ export async function GET(req: NextRequest) {
     });
 
     const output = `
-\x1b[1;36mVALLZX APIs - ADVANCED STATISTICS\x1b[0m
+\x1b[1;36mVISORA APIs - ADVANCED STATISTICS\x1b[0m
 \x1b[1;30m--------------------------------------------------\x1b[0m
 \x1b[1;32mTOTAL REQUESTS\x1b[0m    : ${stats.total_hits.toLocaleString()}
 \x1b[1;32mTOTAL VISITORS\x1b[0m    : ${stats.total_visitors.toLocaleString()}
