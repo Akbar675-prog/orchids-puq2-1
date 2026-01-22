@@ -23,7 +23,7 @@ function replaceCreator(obj: any): any {
   } else if (typeof obj === "object" && obj !== null) {
     const newObj: any = {};
     for (const key in obj) {
-      if (key === "creator" && (obj[key] === "api.visora.my.id" || obj[key] === "visora")) {
+      if (key === "creator" && (obj[key] === "api.vreden.my.id" || obj[key] === "vreden")) {
         newObj[key] = "vallzx_service-id";
       } else {
         newObj[key] = replaceCreator(obj[key]);
@@ -62,7 +62,7 @@ async function handleProxy(
     targetPath = `v1/${targetPath}`;
   }
   
-  const url = `https://api.visora.my.id/api/${targetPath}${searchParamsString ? `?${searchParamsString}` : ""}`;
+  const url = `https://api.vreden.my.id/api/${targetPath}${searchParamsString ? `?${searchParamsString}` : ""}`;
   const method = req.method;
   const userIP = req.headers.get("x-forwarded-for")?.split(",")[0] || "127.0.0.1";
   const realUA = req.headers.get("user-agent") || "browser";
@@ -87,7 +87,7 @@ async function handleProxy(
     headers.set("Sec-Fetch-Mode", "navigate");
     headers.set("Sec-Fetch-Site", "none");
     headers.set("Sec-Fetch-User", "?1");
-    headers.set("Referer", "https://api.visora.my.id/");
+    headers.set("Referer", "https://api.vreden.my.id/");
     
     // Obfuscate IP for provider
     headers.set("X-Forwarded-For", fakeIP);

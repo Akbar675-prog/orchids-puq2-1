@@ -31,7 +31,7 @@ export async function GET(
     targetPath = `artificial/${targetPath}`;
   }
 
-  const url = `https://api.visora.my.id/api/v1/${targetPath}${searchParams ? `?${searchParams}` : ""}`;
+  const url = `https://api.vreden.my.id/api/v1/${targetPath}${searchParams ? `?${searchParams}` : ""}`;
   
   const userIP = req.headers.get("x-forwarded-for")?.split(",")[0] || "127.0.0.1";
   const realUA = req.headers.get("user-agent") || "browser";

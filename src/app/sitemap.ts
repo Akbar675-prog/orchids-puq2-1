@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://visora-api-root-page.vercel.app'
+  const baseUrl = 'https://vreden-api-root-page.vercel.app'
   
   return [
     {

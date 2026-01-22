@@ -57,7 +57,7 @@ export default function TikTokMP3ResultClient({ id, data }: Props) {
 
       <section id="landingHero" className="section-py landing-hero position-relative">
         <img
-          src="https://api.visora.my.id/assets/img/front-pages/backgrounds/hero-bg-light.png"
+          src="https://api.vreden.my.id/assets/img/front-pages/backgrounds/hero-bg-light.png"
           alt="hero background"
           className="position-absolute top-0 start-0 w-100 h-100 z-n1"
           data-app-light-img="front-pages/backgrounds/hero-bg-light.png"
