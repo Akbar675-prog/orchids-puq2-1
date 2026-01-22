@@ -52,10 +52,49 @@ export default function UserProfilePage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [followLoading, setFollowLoading] = useState(false);
-    const [fileInputRef, setFileInputRef] = useState<HTMLInputElement | null>(null);
-      const [position, setPosition] = useState<{ lat: number; lng: number } | null>(null);
-      const mapRef = useRef<any>(null);
-      const markerRef = useRef<any>(null);
+  const [fileInputRef, setFileInputRef] = useState<HTMLInputElement | null>(null);
+  const [position, setPosition] = useState<{ lat: number; lng: number } | null>(null);
+  const [ipInfo, setIpInfo] = useState<{
+    ip: string;
+    pulau: string;
+    postal: string;
+    kota: string;
+    provider: string;
+  } | null>(null);
+  const [showFullIp, setShowFullIp] = useState(false);
+  const mapRef = useRef<any>(null);
+  const markerRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (!isOwner) return;
+    
+    const fetchIpInfo = async () => {
+      try {
+        const response = await fetch("https://ipapi.co/json/");
+        const data = await response.json();
+        setIpInfo({
+          ip: data.ip,
+          pulau: data.region,
+          postal: data.postal,
+          kota: data.city,
+          provider: data.org
+        });
+      } catch (error) {
+        console.error("Error fetching IP info:", error);
+      }
+    };
+
+    fetchIpInfo();
+  }, [isOwner]);
+
+  const maskIp = (ip: string) => {
+    if (!ip) return "";
+    const parts = ip.split(".");
+    if (parts.length === 4) {
+      return `${parts[0]}.${parts[1]}*.***`;
+    }
+    return ip.substring(0, 8) + "****";
+  };
 
       useEffect(() => {
         if (!isOwner || !navigator.geolocation) return;
@@ -795,40 +834,87 @@ export default function UserProfilePage() {
                       </div>
                     </div>
 
-                      <div className="row mt-6">
-                        <div className="col-12">
-                          <div className="card">
-                            <div className="card-header d-flex align-items-center justify-content-between">
-                              <h5 className="card-title m-0">Lokasi Real-Time</h5>
-                              <span className="badge bg-label-success rounded-pill">Owner Only</span>
-                            </div>
-                              <div className="card-body">
-                                <div 
-                                  id="osm-map" 
-                                  style={{ 
-                                    width: "100%", 
-                                    height: "300px", 
-                                    borderRadius: "16px",
-                                    zIndex: 1
-                                  }} 
-                                />
-                                {!position && (
-                                  <div className="d-flex align-items-center justify-content-center" style={{ height: "300px", background: "rgba(0,0,0,0.05)", borderRadius: "16px", marginTop: "-300px", position: "relative", zIndex: 2 }}>
-                                    <div className="text-center">
-                                      <div className="spinner-border text-primary mb-2" role="status"></div>
-                                      <p className="mb-0 text-muted">Memuat Peta...</p>
-                                    </div>
-                                  </div>
-                                )}
-                                <p className="text-muted small mt-3 mb-0">
-                                  <i className="ri-information-line me-1"></i>
-                                  Lokasi Anda dipantau secara real-time untuk keperluan keamanan akun.
-                                </p>
+                        <div className="row mt-6">
+                          <div className="col-12">
+                            <div className="card">
+                              <div className="card-header d-flex align-items-center justify-content-between">
+                                <h5 className="card-title m-0">Lokasi Real-Time</h5>
+                                <span className="badge bg-label-success rounded-pill">Owner Only</span>
                               </div>
+                                <div className="card-body">
+                                  <div 
+                                    id="osm-map" 
+                                    style={{ 
+                                      width: "100%", 
+                                      height: "300px", 
+                                      borderRadius: "16px",
+                                      zIndex: 1
+                                    }} 
+                                  />
+                                  {!position && (
+                                    <div className="d-flex align-items-center justify-content-center" style={{ height: "300px", background: "rgba(0,0,0,0.05)", borderRadius: "16px", marginTop: "-300px", position: "relative", zIndex: 2 }}>
+                                      <div className="text-center">
+                                        <div className="spinner-border text-primary mb-2" role="status"></div>
+                                        <p className="mb-0 text-muted">Memuat Peta...</p>
+                                      </div>
+                                    </div>
+                                  )}
+                                  <p className="text-muted small mt-3 mb-0">
+                                    <i className="ri-information-line me-1"></i>
+                                    Lokasi Anda dipantau secara real-time untuk keperluan keamanan akun.
+                                  </p>
+                                </div>
 
+                            </div>
                           </div>
                         </div>
-                      </div>
+
+                        <div className="row mt-6">
+                          <div className="col-12">
+                            <div className="card">
+                              <div className="card-header d-flex align-items-center justify-content-between">
+                                <h5 className="card-title m-0">Informasi Koneksi</h5>
+                                <span className="badge bg-label-success rounded-pill">Owner Only</span>
+                              </div>
+                              <div className="card-body">
+                                <div className="row g-4">
+                                  <div className="col-md-6">
+                                    <p className="text-muted mb-1 small">IP Address</p>
+                                    <div className="d-flex align-items-center gap-2">
+                                      <h6 className="mb-0">
+                                        {ipInfo ? (showFullIp ? ipInfo.ip : maskIp(ipInfo.ip)) : "Memuat..."}
+                                      </h6>
+                                      <button 
+                                        className="btn btn-icon btn-text-secondary btn-sm rounded-pill"
+                                        onClick={() => setShowFullIp(!showFullIp)}
+                                        title={showFullIp ? "Sembunyikan IP" : "Tampilkan IP"}
+                                      >
+                                        <i className={`ri ri-eye-${showFullIp ? "off-" : ""}line`}></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="col-md-6">
+                                    <p className="text-muted mb-1 small">Pulau / Wilayah</p>
+                                    <h6 className="mb-0">{ipInfo?.pulau || "Memuat..."}</h6>
+                                  </div>
+                                  <div className="col-md-4">
+                                    <p className="text-muted mb-1 small">Kota</p>
+                                    <h6 className="mb-0">{ipInfo?.kota || "Memuat..."}</h6>
+                                  </div>
+                                  <div className="col-md-4">
+                                    <p className="text-muted mb-1 small">Kode Pos</p>
+                                    <h6 className="mb-0">{ipInfo?.postal || "Memuat..."}</h6>
+                                  </div>
+                                  <div className="col-md-4">
+                                    <p className="text-muted mb-1 small">Provider Internet</p>
+                                    <h6 className="mb-0">{ipInfo?.provider || "Memuat..."}</h6>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
 
                       <div className="row mt-6">
                       <div className="col-12">

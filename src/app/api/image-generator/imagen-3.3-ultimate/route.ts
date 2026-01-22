@@ -17,16 +17,17 @@ export async function GET(req: NextRequest) {
 
   await incrementStat("total_requests");
 
-  try {
-    const seed = Math.floor(Math.random() * 1000000);
-    const enhancedPrompt = `${prompt}, ultra high definition, 4K resolution, photorealistic, masterpiece quality, highly detailed`;
-    const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(enhancedPrompt)}?width=2048&height=2048&model=flux&seed=${seed}&nologo=true&enhance=true`;
-    
-    const imageRes = await fetch(imageUrl, {
-      headers: {
-        "Accept": "image/*",
-      },
-    });
+    try {
+      const seed = Math.floor(Math.random() * 1000000);
+      const enhancedPrompt = `${prompt}, ultra high definition, 4K resolution, photorealistic, masterpiece quality, highly detailed`;
+      const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(enhancedPrompt)}?width=2048&height=2048&model=flux&seed=${seed}&nologo=true&enhance=true`;
+      
+      const imageRes = await fetch(imageUrl, {
+        headers: {
+          "Accept": "image/*",
+          "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        },
+      });
     
     if (!imageRes.ok) {
       throw new Error("Failed to generate image from provider");

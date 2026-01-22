@@ -20,7 +20,11 @@ export async function GET(req: NextRequest) {
 
     try {
       const targetUrl = `https://anabot.my.id/api/ai/text2image?prompt=${encodeURIComponent(prompt)}&models=nano-banana&apikey=freeApikey`;
-      const response = await fetch(targetUrl);
+      const response = await fetch(targetUrl, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        }
+      });
       const data = await response.json();
   
       if (!data.success || !data.data?.result?.ImageUrl) {
@@ -28,7 +32,11 @@ export async function GET(req: NextRequest) {
       }
   
       const imageUrl = data.data.result.ImageUrl;
-      const imageRes = await fetch(imageUrl);
+      const imageRes = await fetch(imageUrl, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        }
+      });
       if (!imageRes.ok) throw new Error("Failed to download image from provider URL");
   
     const imageBuffer = Buffer.from(await imageRes.arrayBuffer());
